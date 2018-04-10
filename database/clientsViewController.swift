@@ -10,24 +10,7 @@ import UIKit
 
 class clientsViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
 
-    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
-        get {
-            return .portrait
-        }
-    }
-    
-    open override var shouldAutorotate: Bool {
-        get {
-            return true
-        }
-    }
-    
-    open override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
-        get {
-            return .portrait
-        }
-    }
-
+   
    
     @IBOutlet var clientTableView: UITableView!
     

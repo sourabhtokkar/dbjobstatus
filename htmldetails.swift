@@ -9,39 +9,34 @@
 import UIKit
 
 class htmldetails: UIViewController {
-
-    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
-        get {
-            return .landscape
-        }
-    }
     
-    open override var shouldAutorotate: Bool {
-        get {
-            return true
-        }
-    }
     
-    open override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
-        get {
-            return .landscapeLeft
-        }
-    }
-
+    
+    
     
     @IBOutlet var webView: UIWebView!
     var htmlString:String = ""
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         webView.loadHTMLString(htmlString, baseURL: nil)
         // Do any additional setup after loading the view.
-        
-  
-        let value = UIInterfaceOrientation.landscapeLeft.rawValue
-        UIDevice.current.setValue(value, forKey: "orientation")
+     
+   
         
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if (self.isMovingFromParentViewController) {
+            UIDevice.current.setValue(Int(UIInterfaceOrientation.portrait.rawValue), forKey: "orientation")
+        }
+        
+    }
+    
+    func canRotate() -> Void {}
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

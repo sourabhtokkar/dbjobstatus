@@ -10,23 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, HomeModelProtocol  {
     
-    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
-        get {
-            return .portrait
-        }
-    }
-
-open override var shouldAutorotate: Bool {
-    get {
-        return true
-    }
-}
-
-open override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
-    get {
-        return .portrait
-    }
-}
+  
 
     func loadView(storyBoardName:String, viewName:String, backButtonText:String, valuePassed:String)->Void{
         
