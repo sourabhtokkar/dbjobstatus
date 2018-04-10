@@ -17,6 +17,9 @@
 		C870C5DB2045109E00423266 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C870C5DA2045109E00423266 /* LocationModel.swift */; };
 		C873653C20688631003A2AB0 /* clientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873653B20688631003A2AB0 /* clientsViewController.swift */; };
 		C8736540207468CF003A2AB0 /* customTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873653F207468CF003A2AB0 /* customTableViewCell.swift */; };
+		C8992E12207C53DD0017003A /* String+HTMLTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8992E11207C53DD0017003A /* String+HTMLTableViewCell.swift */; };
+		C8992E14207C57950017003A /* htmldetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8992E13207C57950017003A /* htmldetails.swift */; };
+		C8992E16207C63740017003A /* Navigation+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8992E15207C63740017003A /* Navigation+Orientation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		C870C5DA2045109E00423266 /* LocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		C873653B20688631003A2AB0 /* clientsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = clientsViewController.swift; sourceTree = "<group>"; };
 		C873653F207468CF003A2AB0 /* customTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = customTableViewCell.swift; path = ../customTableViewCell.swift; sourceTree = "<group>"; };
+		C8992E11207C53DD0017003A /* String+HTMLTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HTMLTableViewCell.swift"; sourceTree = "<group>"; };
+		C8992E13207C57950017003A /* htmldetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = htmldetails.swift; path = ../htmldetails.swift; sourceTree = "<group>"; };
+		C8992E15207C63740017003A /* Navigation+Orientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Navigation+Orientation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +70,10 @@
 		C870C5C020450E3D00423266 /* database */ = {
 			isa = PBXGroup;
 			children = (
+				C8992E10207C53A80017003A /* Extensions */,
 				C873653F207468CF003A2AB0 /* customTableViewCell.swift */,
 				C870C5C120450E3D00423266 /* AppDelegate.swift */,
+				C8992E13207C57950017003A /* htmldetails.swift */,
 				C870C5C320450E3D00423266 /* ViewController.swift */,
 				C870C5C520450E3E00423266 /* Main.storyboard */,
 				C873653B20688631003A2AB0 /* clientsViewController.swift */,
@@ -77,6 +85,15 @@
 				C870C5DA2045109E00423266 /* LocationModel.swift */,
 			);
 			path = database;
+			sourceTree = "<group>";
+		};
+		C8992E10207C53A80017003A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C8992E11207C53DD0017003A /* String+HTMLTableViewCell.swift */,
+				C8992E15207C63740017003A /* Navigation+Orientation.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,10 +171,13 @@
 			files = (
 				C870C5D92045108A00423266 /* HomeModel.swift in Sources */,
 				C870C5CA20450E3E00423266 /* database.xcdatamodeld in Sources */,
+				C8992E16207C63740017003A /* Navigation+Orientation.swift in Sources */,
 				C870C5C420450E3D00423266 /* ViewController.swift in Sources */,
+				C8992E12207C53DD0017003A /* String+HTMLTableViewCell.swift in Sources */,
 				C8736540207468CF003A2AB0 /* customTableViewCell.swift in Sources */,
 				C870C5DB2045109E00423266 /* LocationModel.swift in Sources */,
 				C870C5C220450E3D00423266 /* AppDelegate.swift in Sources */,
+				C8992E14207C57950017003A /* htmldetails.swift in Sources */,
 				C873653C20688631003A2AB0 /* clientsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,47 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, HomeModelProtocol  {
     
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        get {
+            return .portrait
+        }
+    }
+
+open override var shouldAutorotate: Bool {
+    get {
+        return true
+    }
+}
+
+open override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
+    get {
+        return .portrait
+    }
+}
+
+    func loadView(storyBoardName:String, viewName:String, backButtonText:String, valuePassed:String)->Void{
+        
+        let storyboard = UIStoryboard(name: storyBoardName, bundle: nil)
+        if viewName == "htmlView" {
+            let vc = storyboard.instantiateViewController(withIdentifier: viewName) as! htmldetails
+            vc.htmlString = valuePassed
+            navigationController?.pushViewController(vc, animated: true)
+            let backButton = UIBarButtonItem(title: backButtonText, style:.plain, target: nil, action: nil)
+            navigationItem.backBarButtonItem = backButton
+            
+        }
+        else {
+            let vc = storyboard.instantiateViewController(withIdentifier: viewName) as UIViewController
+            navigationController?.pushViewController(vc, animated: true)
+            let backButton = UIBarButtonItem(title: backButtonText, style:.plain, target: nil, action: nil)
+            navigationItem.backBarButtonItem = backButton
+            
+        }
+        
+        
+        
+    }
+    
     @IBOutlet var detailsTableView: UITableView!
     //Properties
     var emailSubject:String = ""
@@ -18,8 +59,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var selectedLocation : LocationModel = LocationModel()
     @IBOutlet var listTableView: UITableView!
     
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         
         //set delegates and initialize homeModel
         
@@ -47,6 +93,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
      
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let myAction = UITableViewRowAction(style: .default, title: "More...") { (action, indexPath) in
+            self.loadView(storyBoardName: "Main", viewName: "htmlView", backButtonText: "Back",valuePassed:(tableView.cellForRow(at: indexPath)?.textLabel!.accessibilityValue)!
+                
+            )
+        }
+        let action = [myAction]
+        
+        return action
+    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerText = UITextView()
@@ -79,6 +135,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return 1
     }
     
+        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // Retrieve cell
@@ -94,9 +151,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //        
 //        return myCell
         
+        
+        
+        
         let cell = detailsTableView.dequeueReusableCell(withIdentifier: "BasicCell") as! customTableViewCell
         
-        cell.textLabel!.text = item.Message
+        cell.textLabel!.text = item.Subject
+        cell.textLabel!.lineBreakMode = NSLineBreakMode.byWordWrapping
+        cell.textLabel!.numberOfLines = 0
+        cell.textLabel!.accessibilityValue = item.Message
+       
         
         return cell
         
