@@ -11,7 +11,7 @@ import UIKit
 class customTableViewCell: UITableViewCell {
 
 
-    @IBOutlet var cellView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

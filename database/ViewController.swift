@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, HomeModelProtocol  {
     
+    @IBOutlet var detailsTableView: UITableView!
     //Properties
     var emailSubject:String = ""
     
@@ -34,6 +35,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             homeModel.urlPath =  "http://traveller.photo/swift/service.php?V=diaspark@sdcdesigns.com"
         case "HK Designs":
              homeModel.urlPath =  "http://traveller.photo/swift/service.php?V=diaspark@hk.co"
+        case "Jewel03 Modified PBLs":
+            homeModel.urlPath =  "http://traveller.photo/swift/service.php?V=diasparksql@gmail.com"
         default:
             homeModel.urlPath =  "http://traveller.photo/swift/service.php?V=noreply@sdccreations.com"
         }
@@ -79,17 +82,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // Retrieve cell
-        let cellIdentifier: String = "BasicCell"
-        let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
-        // Get the location to be shown
+//        let cellIdentifier: String = "BasicCell"
+//        let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
+//        // Get the location to be shown
         let item: LocationModel = feedItems[indexPath.row] as! LocationModel
-        // Get references to labels of cell
-        myCell.textLabel!.text = item.Message
+//        // Get references to labels of cell
+//        myCell.textLabel!.text = item.Message
+//        
+//        myCell.textLabel!.lineBreakMode = NSLineBreakMode.byWordWrapping
+//        myCell.textLabel!.numberOfLines = 0
+//        
+//        return myCell
         
-        myCell.textLabel!.lineBreakMode = NSLineBreakMode.byWordWrapping
-        myCell.textLabel!.numberOfLines = 0
+        let cell = detailsTableView.dequeueReusableCell(withIdentifier: "BasicCell") as! customTableViewCell
         
-        return myCell
+        cell.textLabel!.text = item.Message
+        
+        return cell
+        
     }
     
    

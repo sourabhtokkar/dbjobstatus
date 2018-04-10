@@ -14,7 +14,7 @@ class clientsViewController: UIViewController,UITableViewDataSource, UITableView
    
     @IBOutlet var clientTableView: UITableView!
     
-    let clients = ["SD Creations", "SDC Designs", "HK Designs"]
+    let clients = ["SD Creations", "SDC Designs", "HK Designs", "Jewel03 Modified PBLs"]
     
     func loadView(storyBoardName:String, viewName:String, backButtonText:String, valuePassed:String)->Void{
         
@@ -51,20 +51,6 @@ class clientsViewController: UIViewController,UITableViewDataSource, UITableView
     }
     
    
-    
-//    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-//        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
-//            // delete item at indexPath
-//        }
-//        
-//        let share = UITableViewRowAction(style: .normal, title: "Disable") { (action, indexPath) in
-//            // share item at indexPath
-//        }
-//        
-//        share.backgroundColor = UIColor.blue
-//        
-//        return [delete, share]
-//    }
     
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
@@ -128,14 +114,5 @@ class clientsViewController: UIViewController,UITableViewDataSource, UITableView
         // Dispose of any resources that can be recreated.
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
 }
