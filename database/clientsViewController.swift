@@ -65,11 +65,11 @@ class clientsViewController: UIViewController,UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        if let headerView = view as? UITableViewHeaderFooterView {
-            headerView.textLabel?.textAlignment = .center
-            headerView.backgroundView?.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
+
+        setHeaderTitle(tableView,  view: view, section: section)
         }
-    }
+    
+   
     
     override func viewWillAppear(_ animated: Bool) {
         self.clientTableView.reloadData()

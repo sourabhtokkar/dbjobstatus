@@ -76,7 +76,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         homeModel.downloadItems()
         
     }
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
      
+        setHeaderTitle(tableView,  view: view, section: section)
+    }
+    
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let myAction = UITableViewRowAction(style: .default, title: "More...") { (action, indexPath) in
             self.loadView(storyBoardName: "Main", viewName: "htmlView", backButtonText: "Back",valuePassed:(tableView.cellForRow(at: indexPath)?.textLabel!.accessibilityValue)!
@@ -88,19 +92,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return action
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerText = UITextView()
-        
-        headerText.textAlignment = .center
-        headerText.text = emailSubject
-        
-        
-        return headerText
-    }
+
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        return "Diaspark Jobs Status"
+        return emailSubject
         
     }
     func itemsDownloaded(items: NSArray) {

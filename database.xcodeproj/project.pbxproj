@@ -19,6 +19,7 @@
 		C8736540207468CF003A2AB0 /* customTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873653F207468CF003A2AB0 /* customTableViewCell.swift */; };
 		C8992E12207C53DD0017003A /* String+HTMLTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8992E11207C53DD0017003A /* String+HTMLTableViewCell.swift */; };
 		C8992E14207C57950017003A /* htmldetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8992E13207C57950017003A /* htmldetails.swift */; };
+		EF77D5EE207D5BE600A2A3C1 /* UIViewController+headertext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77D5ED207D5BE600A2A3C1 /* UIViewController+headertext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		C873653F207468CF003A2AB0 /* customTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = customTableViewCell.swift; path = ../customTableViewCell.swift; sourceTree = "<group>"; };
 		C8992E11207C53DD0017003A /* String+HTMLTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HTMLTableViewCell.swift"; sourceTree = "<group>"; };
 		C8992E13207C57950017003A /* htmldetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = htmldetails.swift; path = ../htmldetails.swift; sourceTree = "<group>"; };
+		EF77D5ED207D5BE600A2A3C1 /* UIViewController+headertext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+headertext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				C8992E11207C53DD0017003A /* String+HTMLTableViewCell.swift */,
+				EF77D5ED207D5BE600A2A3C1 /* UIViewController+headertext.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				C8992E12207C53DD0017003A /* String+HTMLTableViewCell.swift in Sources */,
 				C8736540207468CF003A2AB0 /* customTableViewCell.swift in Sources */,
 				C870C5DB2045109E00423266 /* LocationModel.swift in Sources */,
+				EF77D5EE207D5BE600A2A3C1 /* UIViewController+headertext.swift in Sources */,
 				C870C5C220450E3D00423266 /* AppDelegate.swift in Sources */,
 				C8992E14207C57950017003A /* htmldetails.swift in Sources */,
 				C873653C20688631003A2AB0 /* clientsViewController.swift in Sources */,
