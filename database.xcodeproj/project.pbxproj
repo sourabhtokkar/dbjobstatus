@@ -73,16 +73,16 @@
 				C8992E10207C53A80017003A /* Extensions */,
 				C873653F207468CF003A2AB0 /* customTableViewCell.swift */,
 				C870C5C120450E3D00423266 /* AppDelegate.swift */,
-				C8992E13207C57950017003A /* htmldetails.swift */,
-				C870C5C320450E3D00423266 /* ViewController.swift */,
-				C870C5C520450E3E00423266 /* Main.storyboard */,
 				C873653B20688631003A2AB0 /* clientsViewController.swift */,
+				C870C5C320450E3D00423266 /* ViewController.swift */,
+				C8992E13207C57950017003A /* htmldetails.swift */,
+				C870C5D82045108A00423266 /* HomeModel.swift */,
+				C870C5DA2045109E00423266 /* LocationModel.swift */,
 				C870C5CB20450E3E00423266 /* Assets.xcassets */,
 				C870C5CD20450E3E00423266 /* LaunchScreen.storyboard */,
 				C870C5D020450E3E00423266 /* Info.plist */,
 				C870C5C820450E3E00423266 /* database.xcdatamodeld */,
-				C870C5D82045108A00423266 /* HomeModel.swift */,
-				C870C5DA2045109E00423266 /* LocationModel.swift */,
+				C870C5C520450E3E00423266 /* Main.storyboard */,
 			);
 			path = database;
 			sourceTree = "<group>";

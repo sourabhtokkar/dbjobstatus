@@ -10,12 +10,8 @@ import UIKit
 
 class customTableViewCell: UITableViewCell {
 
-
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    
 }

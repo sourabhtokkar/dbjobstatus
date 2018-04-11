@@ -11,11 +11,12 @@ import UIKit
 class clientsViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
 
    
-   
+   //Variables : Properties
     @IBOutlet var clientTableView: UITableView!
     
     let clients = ["SD Creations", "SDC Designs", "HK Designs", "Jewel03 Modified PBLs"]
     
+    //Custom Functions
     func loadView(storyBoardName:String, viewName:String, backButtonText:String, valuePassed:String)->Void{
         
         let storyboard = UIStoryboard(name: storyBoardName, bundle: nil)
@@ -32,16 +33,11 @@ class clientsViewController: UIViewController,UITableViewDataSource, UITableView
             navigationController?.pushViewController(vc, animated: true)
             let backButton = UIBarButtonItem(title: backButtonText, style:.plain, target: nil, action: nil)
             navigationItem.backBarButtonItem = backButton
-            
         }
-        
-        
-        
     }
     
    
-    
-    
+    //TableView Functions
     func getSectionTitle( table : UITableView, section_no:Int) -> String{
         
         var secttionTitle :String
@@ -51,8 +47,6 @@ class clientsViewController: UIViewController,UITableViewDataSource, UITableView
     }
     
    
-    
-    
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let myAction = UITableViewRowAction(style: .default, title: "Details") { (action, indexPath) in
             self.loadView(storyBoardName: "Main", viewName: "detailView", backButtonText: "Back",valuePassed:(tableView.cellForRow(at: indexPath)?.textLabel!.text)!
@@ -69,12 +63,6 @@ class clientsViewController: UIViewController,UITableViewDataSource, UITableView
         setHeaderTitle(tableView,  view: view, section: section)
         }
     
-   
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.clientTableView.reloadData()
-        
-    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return clients.count
     }
@@ -102,19 +90,21 @@ class clientsViewController: UIViewController,UITableViewDataSource, UITableView
     }
     
  
-    
+    //Generic Functions
     override func viewDidLoad() {
         
-
+        self.view.backgroundColor = UIColor.lightGray
         
+        //self.automaticallyAdjustsScrollViewInsets = false
         super.viewDidLoad()
         self.title = "Diaspark Jobs Status"
         
-    
-        
         // Do any additional setup after loading the view.
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.clientTableView.reloadData()
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
