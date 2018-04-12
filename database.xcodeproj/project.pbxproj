@@ -19,6 +19,7 @@
 		C8736540207468CF003A2AB0 /* customTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C873653F207468CF003A2AB0 /* customTableViewCell.swift */; };
 		C8992E12207C53DD0017003A /* String+HTMLTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8992E11207C53DD0017003A /* String+HTMLTableViewCell.swift */; };
 		C8992E14207C57950017003A /* htmldetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8992E13207C57950017003A /* htmldetails.swift */; };
+		C8992E24207F0B240017003A /* DiasparkJobStatus.png in Resources */ = {isa = PBXBuildFile; fileRef = C8992E23207F0B240017003A /* DiasparkJobStatus.png */; };
 		EF77D5EE207D5BE600A2A3C1 /* UIViewController+headertext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77D5ED207D5BE600A2A3C1 /* UIViewController+headertext.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		C873653F207468CF003A2AB0 /* customTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = customTableViewCell.swift; path = ../customTableViewCell.swift; sourceTree = "<group>"; };
 		C8992E11207C53DD0017003A /* String+HTMLTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HTMLTableViewCell.swift"; sourceTree = "<group>"; };
 		C8992E13207C57950017003A /* htmldetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = htmldetails.swift; path = ../htmldetails.swift; sourceTree = "<group>"; };
+		C8992E23207F0B240017003A /* DiasparkJobStatus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DiasparkJobStatus.png; sourceTree = "<group>"; };
 		EF77D5ED207D5BE600A2A3C1 /* UIViewController+headertext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+headertext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 		C870C5C020450E3D00423266 /* database */ = {
 			isa = PBXGroup;
 			children = (
+				C8992E22207F0AA20017003A /* Resources */,
 				C8992E10207C53A80017003A /* Extensions */,
 				C873653F207468CF003A2AB0 /* customTableViewCell.swift */,
 				C870C5C120450E3D00423266 /* AppDelegate.swift */,
@@ -94,6 +97,14 @@
 				EF77D5ED207D5BE600A2A3C1 /* UIViewController+headertext.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		C8992E22207F0AA20017003A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C8992E23207F0B240017003A /* DiasparkJobStatus.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +169,7 @@
 			files = (
 				C870C5CF20450E3E00423266 /* LaunchScreen.storyboard in Resources */,
 				C870C5CC20450E3E00423266 /* Assets.xcassets in Resources */,
+				C8992E24207F0B240017003A /* DiasparkJobStatus.png in Resources */,
 				C870C5C720450E3E00423266 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
